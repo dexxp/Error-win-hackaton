@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Circe";
+    src: url("//db.onlinewebfonts.com/t/0373adad7b4c1a926865084f2f8fab7f.eot");
+    src: url("//db.onlinewebfonts.com/t/0373adad7b4c1a926865084f2f8fab7f.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/0373adad7b4c1a926865084f2f8fab7f.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/0373adad7b4c1a926865084f2f8fab7f.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/0373adad7b4c1a926865084f2f8fab7f.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/0373adad7b4c1a926865084f2f8fab7f.svg#Circe") format("svg");
+}
+
+@font-face {
+    font-family: "CirceSV";
+    src: url("//db.onlinewebfonts.com/t/005bcdee87f6d30e191faca5d70c4bab.eot");
+    src: url("//db.onlinewebfonts.com/t/005bcdee87f6d30e191faca5d70c4bab.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/005bcdee87f6d30e191faca5d70c4bab.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/005bcdee87f6d30e191faca5d70c4bab.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/005bcdee87f6d30e191faca5d70c4bab.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/005bcdee87f6d30e191faca5d70c4bab.svg#CirceSV") format("svg");
+}
+
+@font-face {font-family: "ALS Gorizont ExtraBold Expanded"; src: url("//db.onlinewebfonts.com/t/668a4cfd2359664229bbf9bc852c70bd.eot"); src: url("//db.onlinewebfonts.com/t/668a4cfd2359664229bbf9bc852c70bd.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/668a4cfd2359664229bbf9bc852c70bd.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/668a4cfd2359664229bbf9bc852c70bd.woff") format("woff"), url("//db.onlinewebfonts.com/t/668a4cfd2359664229bbf9bc852c70bd.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/668a4cfd2359664229bbf9bc852c70bd.svg#ALS Gorizont ExtraBold Expanded") format("svg"); }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1E1E1E;
+    color: #ffffff;
+    font-family: "Circe", sans-serif;
+}
+
+.container {
+    max-width: 1730px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.first-screen {
+    min-height: 746px;
+    background-size: cover;
+    background-image: url("../images/try.jpg");
+    padding: 195px 0 144px;
+}
+
+.first-screen .tale {
+    margin-left: auto;
+}
+
+.tale {
+    max-width: 966px;
+    width: 100%;
+    background: #191919;
+    border-radius: 70px;
+    padding: 34px 18px 30px 74px;
+}
+
+.tale__name {
+    font-family: 'CirceSV';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
+    /* or 100% */
+
+    letter-spacing: 0.01em;
+
+    color: #FFFFFF;
+
+    margin-bottom: 4px;
+
+}
+
+.tale__text {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    /* or 100% */
+
+    letter-spacing: 0.01em;
+
+    color: #AEAEAE;
+
+}
