@@ -1,25 +1,6 @@
-@font-face {
-    font-family: "Circe";
-    src: url("//db.onlinewebfonts.com/t/0373adad7b4c1a926865084f2f8fab7f.eot");
-    src: url("//db.onlinewebfonts.com/t/0373adad7b4c1a926865084f2f8fab7f.eot?#iefix") format("embedded-opentype"),
-        url("//db.onlinewebfonts.com/t/0373adad7b4c1a926865084f2f8fab7f.woff2") format("woff2"),
-        url("//db.onlinewebfonts.com/t/0373adad7b4c1a926865084f2f8fab7f.woff") format("woff"),
-        url("//db.onlinewebfonts.com/t/0373adad7b4c1a926865084f2f8fab7f.ttf") format("truetype"),
-        url("//db.onlinewebfonts.com/t/0373adad7b4c1a926865084f2f8fab7f.svg#Circe") format("svg");
+@font-face {font-family: "CirceSV";
+    src: url("../fonts/CirceSV.woff2"); /* IE9*/
 }
-
-@font-face {
-    font-family: "CirceSV";
-    src: url("//db.onlinewebfonts.com/t/005bcdee87f6d30e191faca5d70c4bab.eot");
-    src: url("//db.onlinewebfonts.com/t/005bcdee87f6d30e191faca5d70c4bab.eot?#iefix") format("embedded-opentype"),
-        url("//db.onlinewebfonts.com/t/005bcdee87f6d30e191faca5d70c4bab.woff2") format("woff2"),
-        url("//db.onlinewebfonts.com/t/005bcdee87f6d30e191faca5d70c4bab.woff") format("woff"),
-        url("//db.onlinewebfonts.com/t/005bcdee87f6d30e191faca5d70c4bab.ttf") format("truetype"),
-        url("//db.onlinewebfonts.com/t/005bcdee87f6d30e191faca5d70c4bab.svg#CirceSV") format("svg");
-}
-
-@font-face {font-family: "ALS Gorizont ExtraBold Expanded"; src: url("//db.onlinewebfonts.com/t/668a4cfd2359664229bbf9bc852c70bd.eot"); src: url("//db.onlinewebfonts.com/t/668a4cfd2359664229bbf9bc852c70bd.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/668a4cfd2359664229bbf9bc852c70bd.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/668a4cfd2359664229bbf9bc852c70bd.woff") format("woff"), url("//db.onlinewebfonts.com/t/668a4cfd2359664229bbf9bc852c70bd.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/668a4cfd2359664229bbf9bc852c70bd.svg#ALS Gorizont ExtraBold Expanded") format("svg"); }
-
 
 * {
     margin: 0;
@@ -30,7 +11,7 @@
 body {
     background-color: #1E1E1E;
     color: #ffffff;
-    font-family: "Circe", sans-serif;
+    font-family: "CirceSV", sans-serif;
 }
 
 .container {
@@ -59,7 +40,6 @@ body {
 }
 
 .tale__name {
-    font-family: 'CirceSV';
     font-weight: 400;
     font-size: 48px;
     line-height: 48px;
