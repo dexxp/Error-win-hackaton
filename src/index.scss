@@ -16,6 +16,12 @@
     url("./fonts/CirceSV.woff") format("woff");
 }
 
+@font-face {
+  font-family: "ALSGorizont";
+  font-weight: 800;
+  src: url("./fonts/ALSGorizont-ExtraBoldExpanded.ttf") format("opentype");
+}
+
 /* Mixins */
 
 @mixin Circe {
@@ -28,6 +34,11 @@
 
 @mixin Gropled {
   font-family: "Gropled";
+  font-weight: bold;
+}
+
+@mixin ALS {
+  font-family: "ALSGorizont";
   font-weight: bold;
 }
 
@@ -172,29 +183,30 @@ body {
 
   &--camera {
     max-width: 600px;
-
-    .camera {
-      display: flex;
-      width: 100%;
-      height: 338px;
-      box-shadow: inset -100px 0px 100px 50px rgba(255, 253, 216, 0.1),
-        inset 100px 0px 100px 50px rgba(166, 145, 145, 0.1),
-        inset 0px -5px 20px -5px rgba(255, 205, 147, 0.1),
-        inset 0px 5px 40px -5px rgba(255, 205, 147, 0.1);
-      backdrop-filter: blur(17.5px);
-      border-radius: 40px;
-      text-decoration: none;
-
-      &__title {
-        text-align: center;
-        max-width: 378px;
-        margin: auto;
-        color: $white;
-      }
-    }
   }
 }
-
+.camera {
+  width: 100%;
+  &__run {
+    box-shadow: inset -100px 0px 100px 50px rgba(255, 253, 216, 0.1),
+      inset 100px 0px 100px 50px rgba(166, 145, 145, 0.1),
+      inset 0px -5px 20px -5px rgba(255, 205, 147, 0.1),
+      inset 0px 5px 40px -5px rgba(255, 205, 147, 0.1);
+    backdrop-filter: blur(17.5px);
+    border-radius: 40px;
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    height: 338px;
+  }
+  &__title {
+    @include ALS;
+    text-align: center;
+    max-width: 378px;
+    margin: auto;
+    color: $white;
+  }
+}
 .tile {
   max-width: 966px;
   width: 100%;
@@ -389,7 +401,7 @@ body {
   }
 
   &__date {
-    @include Gropled;
+    @include ALS;
     font-size: 60px;
     padding-right: 70px;
   }

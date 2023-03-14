@@ -1,5 +1,6 @@
 import DemonstrationPattern from "../img/demonstration-pattern.svg";
 import DemonstrationPatternTop from "../img/demonstration-pattern-top.svg";
+import { Camera } from "./Camera";
 
 export const Demonstration = () => {
   return (
@@ -22,11 +23,7 @@ export const Demonstration = () => {
                 <h3 className="title title--level_h3 box__title">
                   Ваши устройства
                 </h3>
-                <a href="#" className="camera">
-                  <span className="title title--level_h3 camera__title">
-                    Подключить камеру
-                  </span>
-                </a>
+                <Camera />
               </div>
             </div>
           </div>

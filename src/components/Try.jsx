@@ -1,4 +1,5 @@
 import { Box } from "./Box";
+import { Camera } from "./Camera";
 
 export const Try = () => {
   return (
@@ -19,11 +20,7 @@ export const Try = () => {
               <h3 className="title title--level_h3 box__title">
                 Ваши устройства
               </h3>
-              <a href="#" className="camera">
-                <span className="title title--level_h3 camera__title">
-                  Подключить камеру
-                </span>
-              </a>
+              <Camera />
             </div>
             {/* <Box title="Ваши устройства" classes="box--devices">
               <div className="devices">Устройства</div>
