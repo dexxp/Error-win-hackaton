@@ -1,6 +1,7 @@
 import DemonstrationPattern from "../img/demonstration-pattern.svg";
 import DemonstrationPatternTop from "../img/demonstration-pattern-top.svg";
 import { Camera } from "./Camera";
+import { Box } from "./Box";
 
 export const Demonstration = () => {
   return (
@@ -19,12 +20,9 @@ export const Demonstration = () => {
             </h2>
 
             <div className="demonstration__inner">
-              <div className={`box box--camera`}>
-                <h3 className="title title--level_h3 box__title">
-                  Ваши устройства
-                </h3>
+              <Box title="Камера" classes="box--camera">
                 <Camera />
-              </div>
+              </Box>
             </div>
           </div>
         </div>

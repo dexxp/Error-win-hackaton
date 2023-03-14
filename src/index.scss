@@ -172,19 +172,20 @@ body {
 
   &--devices {
     max-width: 883px;
-
-    .devices {
-      height: 555px;
-      background-color: $dark-500;
-      border-radius: 56px;
-      width: 100%;
-    }
   }
 
   &--camera {
     max-width: 600px;
   }
 }
+
+.devices {
+  height: 555px;
+  background-color: $dark-500;
+  border-radius: 56px;
+  width: 100%;
+}
+
 .camera {
   width: 100%;
   &__run {
