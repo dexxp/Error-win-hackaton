@@ -1,0 +1,489 @@
+@font-face {
+  font-family: "Circe";
+  src: local("Circe"), url("./fonts/Circe.woff2") format("woff2"),
+    url("./fonts/Circe.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gropled";
+  font-weight: bold;
+  src: url("./fonts/Gropled-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "CirceSV";
+  src: local("CirceSV"), url("./fonts/CirceSV.woff2") format("woff2"),
+    url("./fonts/CirceSV.woff") format("woff");
+}
+
+/* Mixins */
+
+@mixin Circe {
+  font-family: "Circe";
+}
+
+@mixin CirceSV {
+  font-family: "CirceSV";
+}
+
+@mixin Gropled {
+  font-family: "Gropled";
+  font-weight: bold;
+}
+
+/* /Mixins */
+
+/* Colors */
+
+$dark-100: #e1e1e1;
+$dark-200: #aeaeae;
+$dark-300: #1e1e1e;
+$dark-400: #191919;
+$dark-500: #11110f;
+
+$bg: $dark-300;
+$white: #ffffff;
+
+/* /Colors */
+
+/* Common */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Circe", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: $bg;
+  color: $white;
+  font-size: 40px;
+}
+
+.container {
+  max-width: 1700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* /Common */
+
+/* BEM-blocks */
+
+.logo {
+  line-height: 0;
+  display: block;
+}
+
+.title {
+  @include Gropled;
+
+  &--level {
+    &_h1 {
+      font-size: 100px;
+    }
+    &_h2 {
+      font-size: 70px;
+    }
+    &_h3 {
+      font-size: 48px;
+      line-height: 48px;
+    }
+    &_h4 {
+      font-size: 40px;
+    }
+  }
+
+  &--tac {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.text {
+  @include CirceSV;
+
+  color: $dark-200;
+
+  &--color {
+    &_white {
+      color: $white;
+    }
+  }
+
+  &--size {
+    &_md {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    &_lg {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 32px;
+  column-gap: 130px;
+}
+
+.team-item {
+  max-width: 470px;
+  width: 100%;
+
+  &__name {
+    @include Circe;
+  }
+}
+
+.box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+
+  &__title {
+    @include Circe;
+    font-weight: 400;
+    color: $dark-200;
+  }
+
+  &--devices {
+    max-width: 883px;
+
+    .devices {
+      height: 555px;
+      background-color: $dark-500;
+      border-radius: 56px;
+      width: 100%;
+    }
+  }
+
+  &--camera {
+    max-width: 600px;
+
+    .camera {
+      display: flex;
+      width: 100%;
+      height: 338px;
+      box-shadow: inset -100px 0px 100px 50px rgba(255, 253, 216, 0.1),
+        inset 100px 0px 100px 50px rgba(166, 145, 145, 0.1),
+        inset 0px -5px 20px -5px rgba(255, 205, 147, 0.1),
+        inset 0px 5px 40px -5px rgba(255, 205, 147, 0.1);
+      backdrop-filter: blur(17.5px);
+      border-radius: 40px;
+      text-decoration: none;
+
+      &__title {
+        text-align: center;
+        max-width: 378px;
+        margin: auto;
+        color: $white;
+      }
+    }
+  }
+}
+
+.tile {
+  max-width: 966px;
+  width: 100%;
+  background: $dark-400;
+  border-radius: 70px;
+  padding: 34px 38px 55px 74px;
+  &__title {
+    @include Circe;
+    z-index: 1;
+
+    position: relative;
+    margin-bottom: 16px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -2px;
+      z-index: -1;
+      width: 768px;
+      height: 20px;
+
+      background: linear-gradient(
+        90deg,
+        #1b18ed -2.08%,
+        rgba(217, 217, 217, 0) 98.83%
+      );
+    }
+  }
+
+  &__text {
+    p + p {
+      margin-top: 6px;
+    }
+  }
+}
+
+.gesture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  &__preview {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin-bottom: -40px;
+    img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: relative;
+      z-index: 0;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__text {
+    font-size: 52px;
+    text-align: center;
+
+    line-height: 48px;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.gestures-wrapper {
+  display: flex;
+  align-items: center;
+  &__col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* /BEM-blocks */
+
+/* Page-blocks */
+
+// section {
+//   margin: 100px 0;
+// }
+
+.header {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position-y: bottom;
+  position: relative;
+  z-index: 0;
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 33px;
+    min-height: 855px;
+  }
+
+  &__logo {
+    text-align: center;
+  }
+
+  &__inner {
+    min-height: 855px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+
+  &__img {
+    width: 530px;
+    height: 855px;
+    position: absolute;
+    top: 0;
+    img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .logo {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    max-width: 1161px;
+    width: 100%;
+    margin-left: auto;
+    position: relative;
+
+    line-height: 80px;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1147px;
+      height: 251px;
+      background: url("./img/h1-bg.png") center center / cover no-repeat;
+      left: -40px;
+      top: -52px;
+    }
+  }
+}
+
+.footer {
+  padding: 140px 0 80px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__box {
+    // width: 470px;
+  }
+
+  &__logo {
+    width: 418px;
+    height: 70px;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__project {
+    width: 378px;
+    height: 159px;
+    img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__date {
+    @include Gropled;
+    font-size: 60px;
+    padding-right: 70px;
+  }
+}
+
+/* /Page-blocks */
+
+/* Section */
+
+.promo {
+  position: relative;
+  z-index: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__video {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__tile {
+    margin-left: auto;
+  }
+
+  &__wrapper-outer {
+    background-repeat: no-repeat;
+    background-position-y: 135%;
+    background-size: 100% auto;
+  }
+
+  &__inner-outer {
+    padding: 195px 0 144px;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-size: 100% auto;
+  }
+}
+
+.try {
+  &__title {
+    margin-bottom: 65px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.demonstration {
+  position: relative;
+  background-color: $dark-500;
+  background-size: 100% auto;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+
+  &__wrapper-outer {
+    padding: 152px 0 400px;
+
+    background-size: 100% auto;
+    background-position-y: top;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 7px;
+    bottom: -2px;
+    background-color: $dark-300;
+  }
+}
+
+.team {
+  &__title {
+    margin-bottom: 75px;
+  }
+}
+
+.gestures {
+  margin-top: 150px;
+  padding-bottom: 136px;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+}
+
+/* /Section */
